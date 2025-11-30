@@ -1,50 +1,68 @@
-# 🚀 Miyabi AI Agent Framework
+# 🚀 Miyabi: Autonomous AI DevOps Platform
 
 <div align="center">
 
-**エージェントの幻想を捨てて、プロンプト設計を学べ**
+**GitHub-as-OS: 完全自律型AI開発オペレーションプラットフォーム**
 
-[![GitHub Stars](https://img.shields.io/github/stars/ShunsukeHayashi/Miyabi_AI_Agent?style=social)](https://github.com/ShunsukeHayashi/Miyabi_AI_Agent)
-[![Discord](https://img.shields.io/discord/DISCORD_ID?color=7289da&label=Discord&logo=discord&logoColor=white)](https://discord.gg/ZpY9sxfYNm)
+[![GitHub Stars](https://img.shields.io/github/stars/001masato/miyabi?style=social)](https://github.com/001masato/miyabi)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Use this template](https://img.shields.io/badge/Use%20this%20template-2ea44f?style=for-the-badge)](https://github.com/ShunsukeHayashi/Miyabi_AI_Agent/generate)
 
-*プロンプト設計 × Tool Call構造化 × フック設計のフレームワーク*
+*Issue = Task • Pull Request = Artifact • Actions = CI/CD*
 
-[🎯 5分で開始](#-5分クイックスタート) • [📖 ドキュメント](#-ドキュメント) • [💬 Discord](https://discord.gg/ZpY9sxfYNm) • [💀 現実を見ろ](#-エージェントの正体)
+[🎯 5分で開始](#-5分クイックスタート) • [📖 ドキュメント](#-ドキュメント) • [🏗️ アーキテクチャ](#-github-as-os-アーキテクチャ)
 
 </div>
 
 ---
 
-## 💀 エージェントの正体
+## 🏗️ GitHub-as-OS アーキテクチャ
 
-**「AIエージェントすごい！」って言ってるヤツ、騙されてない？**
+**Miyabiは、GitHubそのものをオペレーティングシステム（OS）として扱う、完全自律型AI開発プラットフォームです。**
 
-```python
-# これがエージェントの全て
-while True:
-  text = llm.generate()
-  if has_tool_call(text):
-    result = execute(tool)
-    context.append(result)
-  else:
-    break
+従来のエージェントが「チャットボット」の延長であったのに対し、Miyabiは「リポジトリ」を世界として認識し、開発ライフサイクル全体を自律的に回します。
+
+### 🔄 Core Loop: The Trinity
+
+```mermaid
+graph LR
+    Issue[Issue: Task Definition] -->|Agent Execution| PR[Pull Request: Artifact]
+    PR -->|Review & Merge| Actions[Actions: CI/CD & Deploy]
+    Actions -->|Feedback/New Task| Issue
 ```
 
-**それ以上でも、それ以下でもない。**
+1.  **Issue = Task (タスク定義)**
+    *   人間の意図、バグレポート、機能要件はすべてIssueとして定義されます。
+    *   これがエージェントへの「入力（Input）」となります。
 
-- ❌ 「自律的に考える」→ LLMがループしてるだけ
-- ❌ 「複雑な問題を解決」→ プロンプト設計次第
-- ❌ 「AGI目前」→ バカなの？
+2.  **Pull Request = Artifact (成果物)**
+    *   エージェントの思考と作業の結果は、必ずPRとして具現化されます。
+    *   コード、ドキュメント、プラン、すべてがバージョン管理された成果物です。
 
-**現実:**
-- 7割は失敗する
-- プロンプト設計が全て
-- Tool Callの構造化が命
-- デバッグは人間がやる
+3.  **Actions = CI/CD (検証と展開)**
+    *   PRに対するテスト、ビルド、デプロイはActionsが担います。
+    *   エージェントはこの結果を「知覚」し、次の行動を決定します。
 
-**エージェント = LLMのFunction Call発火条件を束ねた関数群**
+---
+
+## 💀 エージェントの正体とMiyabiの回答
+
+**「AIエージェントすごい！」という幻想を捨て、堅牢なOpsを構築せよ。**
+
+Miyabiは、不安定なLLMの出力を、**GitHub-as-OS**という堅牢な構造の中に閉じ込めることで、実用的な自律開発を実現します。
+
+```python
+# Miyabi Operational Loop
+while True:
+  issue = fetch_issue()          # Task
+  plan = design_plan(issue)
+  artifact = execute(plan)       # Agent Work
+  pr = create_pr(artifact)       # Deliverable
+  status = run_actions(pr)       # CI/CD
+  if status == "success":
+      merge(pr)
+  else:
+      retry(issue, status)
+```
 
 ---
 
@@ -144,7 +162,7 @@ claude code
 <tr>
 <td width="50%">
 
-### ✅ 完成済み
+### ✅ 完成済み (Theory & Design)
 
 **理論フレームワーク**
 - 📐 統一エージェント方程式
@@ -153,8 +171,8 @@ claude code
 - 🎯 Intent Resolution
 - 📦 Command Stack
 
-**Claude Code / Gemini 統合**
-- 🤖 11種類の専門エージェント
+**Claude Code / Gemini 統合 (Config)**
+- 🤖 11種類の専門エージェント定義
 - 🎨 15個のPlantUML図
 - ⚙️ 48設定ファイル
 
@@ -166,9 +184,9 @@ claude code
 </td>
 <td width="50%">
 
-### ⚙️ あなたが追加
+### ⚙️ あなたが追加 (Implementation)
 
-**実装コード**
+**実装コード (Pending)**
 - 🦀 Rust実装（自由に）
 - 🐍 Python実装（自由に）
 - 📝 TypeScript実装（自由に）

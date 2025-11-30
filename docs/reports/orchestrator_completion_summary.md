@@ -1,14 +1,18 @@
-# Project Completion Summary: Orchestrator-Subagent Architecture
+# Project Design Specification: Orchestrator-Subagent Architecture
 
 **Date**: 2025-11-07
 **Project**: AI Agent Development Framework v2.0
-**Status**: ✅ **COMPLETE**
+**Status**: ⚠️ **Design Specification (Implementation Pending)**
+
+> [!IMPORTANT]
+> This document describes the **architectural design and expected behavior** of the Orchestrator system.
+> Actual Rust implementation code is currently pending. This serves as a blueprint for future development.
 
 ---
 
-## 🎉 Mission Accomplished
+## 🎉 Design Goals
 
-Successfully refactored the entire AI Agent project to implement the **Orchestrator-Subagent Architecture**, achieving a **3x performance improvement** through parallel execution and specialized subagents.
+The goal is to refactor the AI Agent project to implement the **Orchestrator-Subagent Architecture**, aiming for a **3x performance improvement** through parallel execution and specialized subagents.
 
 ---
 

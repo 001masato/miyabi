@@ -32,6 +32,29 @@ Where:
 Agent(Intent, World₀) = lim_{n→∞} (θ₆_{Learn} ◦ θ₅_{Integrate} ◦ θ₄_{Execute} ◦ θ₃_{Allocate} ◦ θ₂_{Generate} ◦ θ₁_{Understand})ⁿ(Intent, World₀)
 ```
 
+---
+
+## 🏗️ Operational Architecture: GitHub-as-OS
+
+統一エージェント方程式 $\mathbb{A}$ は、**GitHub-as-OS** という具体的なオペレーション環境上で実行されます。
+
+| 抽象概念 (Theory) | 具体実装 (GitHub-as-OS) | 役割 |
+|-------------------|-------------------------|------|
+| **Input** | **Issue** | タスク、バグ、要件の定義 |
+| **Output (World)** | **Pull Request** | コード変更、ドキュメント、成果物 |
+| **Verification** | **Actions** | テスト、ビルド、デプロイ (CI/CD) |
+| **Feedback** | **Comment / Review** | エージェントへのフィードバック |
+
+```mermaid
+graph TD
+    User[User / Environment] -->|Create| Issue
+    Issue -->|Trigger| Agent[Miyabi Agent $\mathbb{A}$]
+    Agent -->|Execute $\Theta$| PR[Pull Request]
+    PR -->|Trigger| Actions[GitHub Actions]
+    Actions -->|Result| Agent
+    Actions -->|Success| Merge[Merge to Main]
+```
+
 **詳細**: `.gemini/UNIFIED_FORMULA.md` を参照
 
 ---

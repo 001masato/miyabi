@@ -1,16 +1,20 @@
-# Orchestrator-Subagent Architecture - Implementation Summary
+# Orchestrator-Subagent Architecture - Design Specification
 
 **Date**: 2025-11-07
 **Version**: 2.0.0
-**Status**: ✅ Complete
+**Status**: ⚠️ **Design Specification Only**
+
+> [!NOTE]
+> This document outlines the **planned implementation details** for the Orchestrator-Subagent Architecture.
+> It serves as a comprehensive guide for developers to implement the system in Rust.
 
 ---
 
-## 🎯 Project Overview
+## 🎯 Architecture Overview
 
-Successfully implemented a complete **Orchestrator-Subagent Architecture** based on the Director-Worker pattern, inspired by [Philipp Schmid's "The Rise of Subagents"](https://www.philschmid.de/the-rise-of-subagents).
+The plan is to implement a complete **Orchestrator-Subagent Architecture** based on the Director-Worker pattern, inspired by [Philipp Schmid's "The Rise of Subagents"](https://www.philschmid.de/the-rise-of-subagents).
 
-This architecture replaces the single large agent approach with a distributed system of specialized subagents, achieving **3x performance improvement** through parallel execution.
+This architecture aims to replace the single large agent approach with a distributed system of specialized subagents, targeting a **3x performance improvement** through parallel execution.
 
 ---
 
